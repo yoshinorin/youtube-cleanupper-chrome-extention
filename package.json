@@ -1,0 +1,15 @@
+{
+  "name": "youtube-cleanupper-chrome-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that hides unwanted videos, channels, shorts, and comments on YouTube.",
+  "scripts": {
+    "lint": "biome lint ./src",
+    "fmt": "biome format --write ./src",
+    "check": "biome check --write ./src",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.3"
+  }
+}

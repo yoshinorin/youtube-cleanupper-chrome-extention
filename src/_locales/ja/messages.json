@@ -1,0 +1,30 @@
+{
+  "extName": { "message": "YouTube Cleanupper" },
+  "extDescription": {
+    "message": "YouTube 上の不要な動画・チャンネル・ショート動画・コメント欄を非表示にします。"
+  },
+  "contextMenuBlock": { "message": "このチャンネルをブロック (YouTube Cleanupper)" },
+  "optionsTitle": { "message": "YouTube Cleanupper 設定" },
+  "ngWordsHeading": { "message": "NG ワード" },
+  "ngWordsHint": {
+    "message": "タイトルまたはチャンネル名に NG ワードを含む動画は、検索結果・関連動画で非表示になります。"
+  },
+  "ngWordPlaceholder": { "message": "フィルタする単語" },
+  "targetTitle": { "message": "タイトル" },
+  "targetChannel": { "message": "チャンネル名" },
+  "targetBoth": { "message": "両方" },
+  "add": { "message": "追加" },
+  "remove": { "message": "削除" },
+  "blockedHeading": { "message": "ブロック済みチャンネル" },
+  "blockedHint": {
+    "message": "YouTube 上でチャンネルを右クリックし「このチャンネルをブロック」を選択すると、ここに追加されます。"
+  },
+  "emptyList": { "message": "(なし)" },
+  "jsonHeading": { "message": "設定 JSON" },
+  "jsonHint": { "message": "設定を JSON として直接編集し、適用できます。" },
+  "apply": { "message": "適用" },
+  "export": { "message": "エクスポート" },
+  "import": { "message": "インポート" },
+  "saved": { "message": "保存しました" },
+  "invalidJson": { "message": "JSON が不正です" }
+}

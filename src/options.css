@@ -1,0 +1,94 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+  color: #0f0f0f;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+select,
+button,
+input[type="text"] {
+  font-size: 0.95rem;
+}
+
+.add-row input[type="text"] {
+  flex: 1;
+  padding: 6px 8px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.85rem;
+  padding: 8px;
+}
+
+.actions-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.error {
+  color: #c00;
+  font-size: 0.85rem;
+}
+
+#export-import-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+#status-message {
+  color: #0a7d2c;
+  font-size: 0.9rem;
+}

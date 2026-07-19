@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm test *)",
+      "Bash(npm run build)",
+      "Bash(npm run fmt)",
+      "Bash(npm run lint)",
+      "Bash(npm run dev)"
+    ],
+    "deny": [
+      "Bash(npm install)",
+      "Bash(npm install *)",
+      "Bash(npm i)",
+      "Bash(npm i *)",
+      "Bash(npm ci)",
+      "Bash(npm ci *)",
+      "Bash(npm uninstall *)",
+      "Bash(npm publish*)",
+      "Bash(npm login*)",
+      "Bash(npm adduser*)",
+      "Bash(npm token *)",
+      "Bash(npx *)",
+      "Bash(npm exec *)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(~/.ssh/**)",
+      "Read(~/.npmrc)"
+    ]
+  }
+}

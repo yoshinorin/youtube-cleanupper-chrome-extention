@@ -1,0 +1,30 @@
+{
+  "extName": { "message": "YouTube Cleanupper" },
+  "extDescription": {
+    "message": "Hide unwanted videos, channels, shorts, and comments on YouTube."
+  },
+  "contextMenuBlock": { "message": "Block this channel (YouTube Cleanupper)" },
+  "optionsTitle": { "message": "YouTube Cleanupper Settings" },
+  "ngWordsHeading": { "message": "NG Words" },
+  "ngWordsHint": {
+    "message": "Videos whose title or channel name contains an NG word are hidden in search results and related videos."
+  },
+  "ngWordPlaceholder": { "message": "Word to filter" },
+  "targetTitle": { "message": "Title" },
+  "targetChannel": { "message": "Channel" },
+  "targetBoth": { "message": "Both" },
+  "add": { "message": "Add" },
+  "remove": { "message": "Remove" },
+  "blockedHeading": { "message": "Blocked Channels" },
+  "blockedHint": {
+    "message": "Right-click a channel on YouTube and choose \"Block this channel\" to add it here."
+  },
+  "emptyList": { "message": "(None)" },
+  "jsonHeading": { "message": "Settings JSON" },
+  "jsonHint": { "message": "Edit the settings directly as JSON and apply them." },
+  "apply": { "message": "Apply" },
+  "export": { "message": "Export" },
+  "import": { "message": "Import" },
+  "saved": { "message": "Saved" },
+  "invalidJson": { "message": "Invalid JSON" }
+}

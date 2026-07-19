@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>YouTube Cleanupper</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1 data-i18n="optionsTitle">YouTube Cleanupper Settings</h1>
+
+  <section id="ng-words-section">
+    <h2 data-i18n="ngWordsHeading">NG Words</h2>
+    <p data-i18n="ngWordsHint"></p>
+    <div class="add-row">
+      <input type="text" id="ng-word-input" data-i18n-placeholder="ngWordPlaceholder">
+      <select id="ng-word-target">
+        <option value="title" data-i18n="targetTitle">Title</option>
+        <option value="channel" data-i18n="targetChannel">Channel</option>
+        <option value="both" data-i18n="targetBoth" selected>Both</option>
+      </select>
+      <button type="button" id="ng-word-add" data-i18n="add">Add</button>
+    </div>
+    <ul id="ng-word-list"></ul>
+  </section>
+
+  <section id="blocked-section">
+    <h2 data-i18n="blockedHeading">Blocked Channels</h2>
+    <p data-i18n="blockedHint"></p>
+    <ul id="blocked-list"></ul>
+  </section>
+
+  <section id="json-section">
+    <h2 data-i18n="jsonHeading">Settings JSON</h2>
+    <p data-i18n="jsonHint"></p>
+    <textarea id="json-editor" rows="14"></textarea>
+    <div class="actions-row">
+      <button type="button" id="json-apply" data-i18n="apply">Apply</button>
+      <span id="json-error" class="error"></span>
+    </div>
+  </section>
+
+  <section id="export-import-section">
+    <button type="button" id="export-btn" data-i18n="export">Export</button>
+    <label class="file-label" for="import-input">
+      <span data-i18n="import">Import</span>
+      <input type="file" id="import-input" accept="application/json">
+    </label>
+  </section>
+
+  <p id="status-message"></p>
+
+  <script src="common.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
