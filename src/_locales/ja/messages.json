@@ -1,7 +1,7 @@
 {
   "extName": { "message": "YouTube Cleanupper" },
   "extDescription": {
-    "message": "YouTube 上の不要な動画・チャンネル・ショート動画・コメント欄を非表示にします。"
+    "message": "YouTube 上の不要な動画・チャンネル・ショート動画・コメント欄・ライブチャットを非表示にし、関連動画は「関連動画」タブをデフォルトにします。"
   },
   "contextMenuBlock": { "message": "このチャンネルをブロック (YouTube Cleanupper)" },
   "optionsTitle": { "message": "YouTube Cleanupper 設定" },

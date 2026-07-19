@@ -1,7 +1,7 @@
 {
   "extName": { "message": "YouTube Cleanupper" },
   "extDescription": {
-    "message": "Hide unwanted videos, channels, shorts, and comments on YouTube."
+    "message": "Hide unwanted videos, channels, Shorts, comments, and live chat on YouTube, and default related videos to Related."
   },
   "contextMenuBlock": { "message": "Block this channel (YouTube Cleanupper)" },
   "optionsTitle": { "message": "YouTube Cleanupper Settings" },
