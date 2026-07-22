@@ -105,6 +105,12 @@ The live chat panel on live / live-replay watch pages is rendered inside its **o
   - Chat iframe: watches for the native "close" button (`#close-button button`, aria-label "閉じる"/"Close") via a `MutationObserver` and clicks it once (`liveChatClosed` guard prevents re-clicking, so a user who manually reopens chat isn't fought)
 - Because it's YouTube's own close control, the user can still reopen chat manually; this is a UX choice made deliberately over a hard CSS `display: none`
 
+### Autoplay off
+
+- `AUTOPLAY_TOGGLE_SELECTOR = 'ytd-autonav-toggle-button-renderer #toggle'`, checked via `applyFilters()` on the watch page
+- `autoplayHandled` guard ensures the toggle is only ever acted on once per content-script lifetime: if it's on (`aria-pressed="true"`), it's clicked once to turn off; after that, the extension never touches it again, so a user who manually turns autoplay back on isn't fought
+- Same design rationale as the live chat close: use YouTube's own control rather than hiding/disabling the player feature directly
+
 ### Right-click block flow
 
 1. `content.js` captures the `contextmenu` event (capture phase) in the **top frame only**, extracts channel info via `e.target.closest(<right-click extraction selector>)`, and holds it in a variable
@@ -140,6 +146,7 @@ Sections:
 - `ytd-compact-video-renderer` and lockup items sometimes don't expose the channel name as a link, so the handle can't be extracted; matching falls back to an exact channel-name match.
 - The live chat "close" button is targeted via the CSS selector `#close-button button` inside the chat iframe. This was reverse-engineered from a single observed DOM snapshot, not from YouTube documentation — if that markup changes, auto-closing silently stops working (no error, chat just stays open).
 - Mix entries are hidden via the `ytd-radio-renderer` selector, assumed from general knowledge of YouTube's DOM rather than a verified live snapshot; if YouTube renames this element, Mix entries will reappear.
+- The autoplay toggle is targeted via `ytd-autonav-toggle-button-renderer #toggle`, assumed from general knowledge of YouTube's DOM rather than a verified live snapshot; if YouTube changes that structure, autoplay may silently stay on.
 
 ## Status
 

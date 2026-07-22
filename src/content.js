@@ -12,10 +12,14 @@ const DEFAULT_CHIP_LABELS = ['関連動画', 'related'];
 // not the main watch page. Its "close" button has aria-label "閉じる" / "Close".
 const LIVE_CHAT_CLOSE_BUTTON_SELECTOR = '#close-button button';
 
+// The autoplay toggle on watch pages, `aria-pressed="true"` when autoplay is on.
+const AUTOPLAY_TOGGLE_SELECTOR = 'ytd-autonav-toggle-button-renderer #toggle';
+
 let settings = { ngWords: [], blockedChannels: [] };
 let applyFiltersTimer = null;
 let lastRelatedChipVideoId = null;
 let liveChatClosed = false;
+let autoplayHandled = false;
 let pendingChannelInfo = null;
 
 function isFilterablePage() {
@@ -80,6 +84,19 @@ function applyFilters() {
 
   if (location.pathname === '/watch') {
     applyRelatedChips();
+    disableAutoplayIfEnabled();
+  }
+}
+
+function disableAutoplayIfEnabled() {
+  if (autoplayHandled) return;
+
+  const toggle = document.querySelector(AUTOPLAY_TOGGLE_SELECTOR);
+  if (!toggle) return;
+
+  autoplayHandled = true;
+  if (toggle.getAttribute('aria-pressed') === 'true') {
+    toggle.click();
   }
 }
 

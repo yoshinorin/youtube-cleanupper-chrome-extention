@@ -47,6 +47,7 @@ npm test        # run the unit tests (Node's built-in test runner, no extra depe
 | Comments hidden | Open any video — the comments section is not shown |
 | Related tab default | Open any video — the "All" and "Recommended" chips are hidden and "Related" (or the first remaining chip) is selected by default |
 | Live chat closed | Open a live stream (or its replay) — the chat panel closes itself shortly after loading |
+| Autoplay off | Open any video with autoplay on — the autoplay toggle switches off shortly after loading |
 | JSON editing | Edit the JSON in the options page and click "Apply" — invalid JSON shows an error |
 | Export / Import | Export downloads a `.json` file; importing it restores the settings |
 

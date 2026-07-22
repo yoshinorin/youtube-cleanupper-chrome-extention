@@ -13,6 +13,7 @@ No build tools or external runtime dependencies — plain JS/CSS/HTML.
 - Hide the comments section on watch pages
 - Hide the "All" and "Recommended" chips in the related videos chip bar, and default the selected chip to "Related" (falls back to the first remaining chip if "Related" isn't present)
 - Automatically close the live chat panel on live / live-replay watch pages, using YouTube's own close button (so it can still be reopened manually)
+- Automatically turn off autoplay on watch pages, using YouTube's own autoplay toggle (so it can still be turned back on manually)
 - Settings are stored as JSON, editable directly in the options page, and exportable/importable as a `.json` file
 
 ## Installation (load unpacked)
@@ -51,6 +52,7 @@ Settings are stored under the `settings` key in `chrome.storage.local`:
 - Some layouts (e.g. `ytd-compact-video-renderer`, lockup items) may not expose a channel link, so the channel handle can't always be extracted; falls back to exact name matching
 - The live chat close button is looked up by a CSS selector (`#close-button` inside the chat iframe); if YouTube changes that structure, auto-closing may stop working
 - Mix entries are hidden via the `ytd-radio-renderer` selector; if YouTube renames this element, Mix entries will reappear in search results
+- Autoplay is turned off via the `ytd-autonav-toggle-button-renderer #toggle` selector; if YouTube changes that structure, autoplay may stay on
 
 ## Development
 
