@@ -79,6 +79,10 @@ Stored under the `settings` key in `chrome.storage.local`:
 - CSS (`content.css`): hides `ytd-search ytd-reel-shelf-renderer` and `ytd-search grid-shelf-view-model` (the Shorts shelves)
 - JS: on the search page, hides any video item containing `a[href^="/shorts/"]`
 
+### Hiding Mix entries (search results only)
+
+CSS only: `ytd-search ytd-radio-renderer { display: none !important; }`. Mix entries are YouTube's auto-generated radio playlists, not individual videos, so they're excluded outright rather than matched against NG words/blocked channels.
+
 ### Hiding comments
 
 CSS only: `ytd-watch-flexy ytd-comments#comments { display: none !important; }`
@@ -135,6 +139,7 @@ Sections:
 - Related-video chips are matched by text label rather than position, but the label text itself is still an assumption; if YouTube changes the wording (in either locale), the "All"/"Recommended" chips won't be recognized and won't be hidden.
 - `ytd-compact-video-renderer` and lockup items sometimes don't expose the channel name as a link, so the handle can't be extracted; matching falls back to an exact channel-name match.
 - The live chat "close" button is targeted via the CSS selector `#close-button button` inside the chat iframe. This was reverse-engineered from a single observed DOM snapshot, not from YouTube documentation — if that markup changes, auto-closing silently stops working (no error, chat just stays open).
+- Mix entries are hidden via the `ytd-radio-renderer` selector, assumed from general knowledge of YouTube's DOM rather than a verified live snapshot; if YouTube renames this element, Mix entries will reappear.
 
 ## Status
 

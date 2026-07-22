@@ -8,6 +8,11 @@ ytd-search grid-shelf-view-model {
   display: none !important;
 }
 
+/* Mix (auto-generated radio playlist) entries on the search results page */
+ytd-search ytd-radio-renderer {
+  display: none !important;
+}
+
 /* Comments section on the watch page */
 ytd-watch-flexy ytd-comments#comments {
   display: none !important;

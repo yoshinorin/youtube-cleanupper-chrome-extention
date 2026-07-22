@@ -7,6 +7,7 @@ No build tools or external runtime dependencies — plain JS/CSS/HTML.
 ## Features
 
 - Hide Shorts in search results
+- Hide Mix (auto-generated radio playlist) entries in search results
 - Hide videos in search results / related videos whose title and/or channel name contains an NG word (match target: title, channel, or both)
 - Block a channel via the right-click context menu on the home page or related videos; blocked channels are hidden from search results and related videos
 - Hide the comments section on watch pages
@@ -49,6 +50,7 @@ Settings are stored under the `settings` key in `chrome.storage.local`:
 - Related-video chips are matched by their text label (Japanese/English), not position; if YouTube uses a different wording, the "All"/"Recommended" chips won't be recognized
 - Some layouts (e.g. `ytd-compact-video-renderer`, lockup items) may not expose a channel link, so the channel handle can't always be extracted; falls back to exact name matching
 - The live chat close button is looked up by a CSS selector (`#close-button` inside the chat iframe); if YouTube changes that structure, auto-closing may stop working
+- Mix entries are hidden via the `ytd-radio-renderer` selector; if YouTube renames this element, Mix entries will reappear in search results
 
 ## Development
 

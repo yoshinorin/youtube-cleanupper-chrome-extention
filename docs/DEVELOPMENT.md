@@ -41,6 +41,7 @@ npm test        # run the unit tests (Node's built-in test runner, no extra depe
 | Feature | How to check |
 |---|---|
 | Shorts hidden | Search on youtube.com — no Shorts shelf or individual Shorts items appear |
+| Mix hidden | Search on youtube.com — no Mix (radio playlist) entries appear in the results |
 | NG words | Add an NG word in the options page — matching videos disappear from search results |
 | Channel block | Right-click a channel name on the home page or in related videos, choose "Block this channel" — its videos disappear from search results / related videos |
 | Comments hidden | Open any video — the comments section is not shown |
